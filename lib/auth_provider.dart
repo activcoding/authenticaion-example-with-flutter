@@ -9,6 +9,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AuthProvider extends ChangeNotifier {
   static final AuthProvider _instance = AuthProvider._internal();
   static String url = 'http://localhost:8081/';
+
+  // Please note that this API key is only for demonstration purposes;
+  // You should never store your API key in git tracked files;
   static String apiKey = 'a648bbc5-605a-4989-ba90-1386072c30cc';
 
   factory AuthProvider() => _instance;
@@ -152,9 +155,9 @@ class AuthProvider extends ChangeNotifier {
 
     final response = await request.send();
     if (response.statusCode == 200) {
-      print(response.statusCode);
       // The account was activated successfully;
       // A JWT will be returned in the next login request;
+      return;
     } else {
       final responseBody = await response.stream.bytesToString();
       throw APIException(response.statusCode, responseBody);

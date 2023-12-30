@@ -23,8 +23,9 @@ class _SignUpViewState extends State<SignUpView> {
   bool _showError = false;
   String _errorTitle = "";
   String _errorMessage = "";
-  String _errorMessageButtonTitle = "";
+  final String _errorMessageButtonTitle = "";
   VoidCallback? _onErrorButtonPressed;
+
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
@@ -126,7 +127,7 @@ class _SignUpViewState extends State<SignUpView> {
       MaterialPageRoute(
         builder: (context) => WillPopScope(
           onWillPop: () async => false,
-          child: ActivateAccount(),
+          child: const ActivateAccount(),
         ),
       ),
     );

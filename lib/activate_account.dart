@@ -18,6 +18,7 @@ class ActivateAccountState extends State<ActivateAccount> {
   bool _showError = false;
   String _errorTitle = "";
   String _errorMessage = "";
+
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
@@ -60,7 +61,6 @@ class ActivateAccountState extends State<ActivateAccount> {
                   setState(() {
                     authCode = value;
                   });
-                  print(value);
                 },
               ),
             ),

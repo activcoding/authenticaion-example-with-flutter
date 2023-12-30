@@ -34,7 +34,7 @@ class ProfileViewState extends State<ProfileView> {
     final authProvider = Provider.of<AuthProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Profile'),
+        title: const Text('User Profile'),
       ),
       body: Center(
         child: Column(
@@ -42,12 +42,12 @@ class ProfileViewState extends State<ProfileView> {
           children: [
             Text(
               'Username: $_username',
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Email: $_email',
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
             ElevatedButton(
               onPressed: () {
