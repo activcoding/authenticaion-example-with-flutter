@@ -20,3 +20,4 @@ We've created straightforward examples for signup, signin, and email verificatio
 5. Run the Project: Execute `flutter run` to launch the project.
 
 ## Screenshots
+[Comming Soon]
