@@ -31,17 +31,25 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const SizedBox(height: 100.0),
+            Image.asset(
+              'assets/logo.png',
+              width: 300,
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
             const Text(
               'Welcome!',
               style: TextStyle(fontSize: 30),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 5.0),
             const Text(
               'Please login to continue',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
                 color: Colors.grey,
               ),
             ),

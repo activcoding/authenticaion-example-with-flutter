@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: authProvider.email != null && authProvider.password != ''
+        body: authProvider.jwt != null
             ? const ProfileView()
             : const SignInScreen(),
       ),
